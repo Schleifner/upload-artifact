@@ -8,6 +8,7 @@ import {UploadInputs} from './upload-inputs'
 export function getInputs(): UploadInputs {
   const name = core.getInput(Inputs.Name)
   const path = core.getInput(Inputs.Path, {required: true})
+  const secondPath = core.getInput(Inputs.SecondPath, {required: false})
   const overwrite = core.getBooleanInput(Inputs.Overwrite)
 
   const ifNoFilesFound = core.getInput(Inputs.IfNoFilesFound)
@@ -26,6 +27,7 @@ export function getInputs(): UploadInputs {
   const inputs = {
     artifactName: name,
     searchPath: path,
+    secondSearchPath: secondPath,
     ifNoFilesFound: noFileBehavior,
     overwrite: overwrite
   } as UploadInputs

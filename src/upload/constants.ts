@@ -2,6 +2,7 @@
 export enum Inputs {
   Name = 'name',
   Path = 'path',
+  SecondPath = "second-path",
   IfNoFilesFound = 'if-no-files-found',
   RetentionDays = 'retention-days',
   CompressionLevel = 'compression-level',

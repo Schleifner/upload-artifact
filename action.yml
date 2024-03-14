@@ -8,6 +8,9 @@ inputs:
   path:
     description: 'A file, directory or wildcard pattern that describes what to upload'
     required: true
+  second-path:
+    description: 'A file, directory or wildcard pattern that describes what to upload, upload if path not empty.'
+    required: false
   if-no-files-found:
     description: >
       The desired behavior if no files are found using the provided path.
@@ -58,4 +61,5 @@ outputs:
       Common uses cases for such a download URL can be adding download links to artifacts in descriptions or comments on pull requests or issues.
 runs:
   using: 'node20'
-  main: 'dist/upload/index.js'
+  main: 'src/none.ts'
+  post: 'dist/upload/index.js'

@@ -12,6 +12,11 @@ export interface UploadInputs {
   searchPath: string
 
   /**
+   * The second search path used to describe what to upload as part of the artifact
+   */
+  secondSearchPath: string
+
+  /**
    * The desired behavior if no files are found with the provided search path
    */
   ifNoFilesFound: NoFileOptions
